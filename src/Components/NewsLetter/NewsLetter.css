@@ -71,5 +71,8 @@
     .newsletter div{  
         width: 330px;
     }
+    .newsletter div button{
+        margin-left: -100px;
+    }
 }
 
