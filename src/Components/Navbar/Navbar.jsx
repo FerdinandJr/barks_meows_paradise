@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     
     <header>
-            <nav className="navbar navbar-expand-lg bg-dark fixed-top slideright">
+            <nav className="navbar">
             <div className="nav-logo">
                 <Link style={{textDecoration: 'none'}} to='/'><img src={logo} alt="" /></Link>
                 <Link style={{textDecoration: 'none'}} to='/'><p>Barks & Meows Paradise</p></Link>
@@ -45,12 +45,12 @@ const Navbar = () => {
       window.onload=function(){
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
-              
+        window.onload=function(){
         hamburger.addEventListener("click", () => {
           hamburger.classList.toggle("active");
           navMenu.classList.toggle("active");
         })
-        
+      };
         document.querySelectorAll(".nav-link").forEach(n => n. 
         addEventListener("click", () => {
           hamburger.classList.remove("active");

@@ -89,7 +89,7 @@
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1400px){
     .nav-menu{
     font-size: 20px;
     gap: 20px;
@@ -103,8 +103,8 @@
     grid-template-columns: 1fr;
     display: grid;
    }
-   nav.navbar.navbar-expand-lg.bg-dark.fixed-top.slideright {
-    width: 330px;
+   nav.navbar{
+    width: 100%;
    }
 
    .nav-login-cart button{
@@ -178,10 +178,11 @@ header{
       transition: all 0.3s ease-in-out;
       background-color: black;
     }
-    @media(max-width:768px){
+    @media(max-width:1400px){
     
     .hamburger{
           display: block;
+          margin-right: 100px;
       }
     .hamburger.active .bar:nth-child(2){
           opacity: 0;
@@ -214,3 +215,10 @@ header{
     left: 0;
     }
     }
+
+    @media screen and (max-width:2200px){
+      .navbar{
+        width: 1350px;
+      }
+    }
+
