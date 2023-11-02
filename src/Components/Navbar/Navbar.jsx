@@ -14,15 +14,15 @@ const Navbar = () => {
   return (
     
     <header>
-            <nav class="navbar navbar-expand-lg bg-dark fixed-top slideright">
+            <nav className="navbar navbar-expand-lg bg-dark fixed-top slideright">
             <div className="nav-logo">
                 <Link style={{textDecoration: 'none'}} to='/'><img src={logo} alt="" /></Link>
                 <Link style={{textDecoration: 'none'}} to='/'><p>Barks & Meows Paradise</p></Link>
             </div>
-            <ul class="ms-auto nav-menu">
-                <li class="nav-link" onClick={()=>{setMenu("shop")}}><Link style={{textDecoration: 'none'}} to='/'>HOME</Link>{menu==="shop"?<hr/>:<></>}</li>
-                <li class="nav-link" onClick={()=>{setMenu("dogs")}}><Link style={{textDecoration: 'none'}} to='/dogs'>DOG</Link>{menu==="dogs"?<hr/>:<></>}</li>
-                <li class="nav-link" onClick={()=>{setMenu("cats")}}><Link style={{textDecoration: 'none'}} to='/cats'>CAT</Link>{menu==="cats"?<hr/>:<></>}</li>
+            <ul className="ms-auto nav-menu">
+                <li className="nav-link" onClick={()=>{setMenu("shop")}}><Link style={{textDecoration: 'none'}} to='/'>HOME</Link>{menu==="shop"?<hr/>:<></>}</li>
+                <li className="nav-link" onClick={()=>{setMenu("dogs")}}><Link style={{textDecoration: 'none'}} to='/dogs'>DOG</Link>{menu==="dogs"?<hr/>:<></>}</li>
+                <li className="nav-link" onClick={()=>{setMenu("cats")}}><Link style={{textDecoration: 'none'}} to='/cats'>CAT</Link>{menu==="cats"?<hr/>:<></>}</li>
                 <div className="nav-login-cart">
                 <Link to='/login'><button class="nav-link">Login</button></Link>
                 <Link to='/cart'><img src={cart_icon} alt="" className='cartmenu nav-link'/></Link>
@@ -30,9 +30,9 @@ const Navbar = () => {
             </div>
             </ul>
                <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
                </div>
             </nav>
             </header>
