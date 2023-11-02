@@ -41,7 +41,7 @@ const Navbar = () => {
   
 }
 
-
+window.onload=function(){
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
         window.onload=function(){
@@ -56,7 +56,7 @@ const Navbar = () => {
           navMenu.classList.remove("active");
         })
         )
-
+      };
 
 
 
