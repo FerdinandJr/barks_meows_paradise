@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     
     <header>
-            <nav className="navbar navbar-expand-lg bg-dark fixed-top slideright">
+            <nav className="navbar">
             <div className="nav-logo">
                 <Link style={{textDecoration: 'none'}} to='/'><img src={logo} alt="" /></Link>
                 <Link style={{textDecoration: 'none'}} to='/'><p>Barks & Meows Paradise</p></Link>
