@@ -154,10 +154,6 @@
     }
     }
 
-    a{
-      font-weight: 500px;
-    }
-
     header {
       display: flex;
       align-items: center;
@@ -173,6 +169,7 @@
       margin: 0 1rem;
       color: black;
       text-decoration: none;
+      gap: 100px;
     }
     
     nav a:hover {
