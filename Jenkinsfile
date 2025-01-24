@@ -6,6 +6,7 @@ pipeline {
         EC2_IP = '54.179.104.231'
         DockerComposeFile = 'docker-compose.yml'
         DotEnvFile = '.env'
+        Dimage = 'barks_meows_paradise'
     }
 
     stages {
@@ -14,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker Image..."
-                    sh "docker build -t ${ImageRegistry}/${JOB_NAME}:${BUILD_NUMBER} ."
+                    sh "docker build -t ${ImageRegistry}/${Dimage}:1.0 ."
                 }
             }
         }
@@ -25,7 +26,7 @@ pipeline {
                     echo "Pushing Image to DockerHub..."
                     withCredentials([usernamePassword(credentialsId: 'docker-login', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                         sh "echo $PASS | docker login -u $USER --password-stdin"
-                        sh "docker push ${ImageRegistry}/${JOB_NAME}:${BUILD_NUMBER}"
+                        sh "docker push ${ImageRegistry}/${Dimage}:1.0 "
                     }
                 }
             }
