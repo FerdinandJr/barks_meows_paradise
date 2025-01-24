@@ -6,7 +6,7 @@ pipeline {
         EC2_IP = '54.179.104.231'
         DockerComposeFile = 'docker-compose.yml'
         DotEnvFile = '.env'
-        Dimage = 'barks_meows_paradise'
+        Dimage = 'barks_meows_paradise1'
     }
 
     stages {
