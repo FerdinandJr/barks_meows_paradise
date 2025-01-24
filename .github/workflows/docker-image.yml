@@ -17,4 +17,3 @@ jobs:
         run: |
           docker login -u ferdinandjrdocker -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push ferdinandjrdocker/barks_meows_paradise:latest
-          
