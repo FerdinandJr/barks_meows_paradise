@@ -7,6 +7,7 @@ pipeline {
         DockerComposeFile = 'docker-compose.yml'
         DotEnvFile = '.env'
         Dimage = 'barks_meows_paradise1'
+        DOCKER_CREDENTIALS = credentials('barks_meows_paradise1')
     }
 
     stages {
@@ -19,6 +20,16 @@ pipeline {
                 }
             }
         }
+
+
+        stage("Login") {
+            steps {
+                script {
+                    echo "Login"
+                        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKER_CREDENTIALS_USR --password-stdin'
+                    }
+                }
+            }
 
         stage("pushImage") {
             steps {
