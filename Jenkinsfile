@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker Image..."
-                    sh "docker build -t ${ImageRegistry}/${Dimage}:1.0 ."
+                    sh 'docker build -t ferdinandjrdocker/barks_meows_paradise1:1.0 .'
                 }
             }
         }
