@@ -20,7 +20,15 @@ pipeline {
             }
         }
 
-      
+        stage("pushImage") {
+            steps {
+                script {
+                    echo "Pushing Image to DockerHub..."
+                        sh "docker push ${ImageRegistry}/${Dimage}:1.0 "
+                    }
+                }
+            }
+        }
 
     
     }
