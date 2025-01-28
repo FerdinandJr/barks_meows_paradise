@@ -1,0 +1,22 @@
+name: Push Image to docker hub
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . -t ferdinandjrdocker/barks_meows_paradise:1.0
+    - name: Login to dockerhub
+      run: docker login -u ferdinandjrdocker -p ${{ secrets.DOCKER_HUB_TOKEN }}
+    - name: push dockerhub
+      run: docker push ferdinandjrdocker/barks_meows_paradise:1.0
