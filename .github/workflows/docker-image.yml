@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . -t ferdinandjrdocker/barks_meows_paradise:latest
+      run: docker build --no-cache . -t ferdinandjrdocker/barks_meows_paradise:latest
     - name: push image to docker hub
       run: |
           docker login -u ferdinandjrdocker -p ${{ secrets.DOCKER_HUB_TOKEN }}
