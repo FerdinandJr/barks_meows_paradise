@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t ferdinandjrdocker/barks_meows_paradise:1.0
     - name: Login to dockerhub
-      run: docker login -u ferdinandjrdocker -p ${{ secrets.DOCKER_HUB_TOKEN }}
-    - name: push dockerhub
-      run: docker push ferdinandjrdocker/barks_meows_paradise:1.0
+      run: |
+        docker login -u ferdinandjrdocker -p ${{ secrets.DOCKER_HUB_TOKEN }}
+        docker push ferdinandjrdocker/barks_meows_paradise:1.0
