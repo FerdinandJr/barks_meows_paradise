@@ -7,7 +7,7 @@ pipeline {
         DockerComposeFile = 'docker-compose.yml'
         DotEnvFile = '.env'
         Dimage = 'barks_meows_paradise1'
-        DOCKER_CREDENTIALS = credentials('barks_meows_paradise1')
+        DOCKER_CREDENTIALS = credentials('ferdinandjrdocker')
     }
 
     stages {
