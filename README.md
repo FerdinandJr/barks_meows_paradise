@@ -1,4 +1,4 @@
-# barks_meows_paradise e-commerce application in react
+#Barks Meows Paradise e-commerce application in React
 
 A static e-commerce website, Barks Meows Paradise, using React. This site showcases a variety of pet-related products, including food for dogs and cats. With an interactive and responsive design, it features product displays, a shopping cart, and checkout options for a seamless shopping experience.
 
